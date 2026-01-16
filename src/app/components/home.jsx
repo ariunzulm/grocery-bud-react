@@ -20,7 +20,7 @@ export default function Home() {
     setList([...list, { id: Date.now(), name: item, completed: false }]);
     setItem("");
   };
-  
+
   const toggleItem = (id) => {
     setList(
       list.map((i) => (i.id === id ? { ...i, completed: !i.completed } : i))
@@ -74,6 +74,7 @@ export default function Home() {
           </li>
         ))}
       </ul>
+      <ToastContainer position="top-center" autoClose={3000} />
     </div>
   );
 }
